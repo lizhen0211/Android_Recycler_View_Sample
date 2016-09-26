@@ -22,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SimpleCardViewActivity.class);
         startActivity(intent);
     }
+
+    public void onListRecyclerViewClick(View view) {
+        Intent intent = new Intent(this, ListRecyclerViewActivity.class);
+        startActivity(intent);
+    }
 }

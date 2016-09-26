@@ -27,7 +27,7 @@ public class SimpleRecyclerViewActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(getDataSet());
+        mAdapter = new SimpleRecyclerViewAdapter(getDataSet());
         mRecyclerView.setAdapter(mAdapter);
     }
 
