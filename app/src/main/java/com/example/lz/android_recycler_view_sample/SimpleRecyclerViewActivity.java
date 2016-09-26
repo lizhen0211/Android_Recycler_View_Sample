@@ -1,0 +1,37 @@
+package com.example.lz.android_recycler_view_sample;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+public class SimpleRecyclerViewActivity extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
+
+    private LinearLayoutManager mLayoutManager;
+
+    private RecyclerView.Adapter mAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_recycler_list_view);
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        // specify an adapter (see also next example)
+        mAdapter = new MyAdapter(getDataSet());
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
+    private String[] getDataSet() {
+        return new String[]{"aa", "bb", "cc", "dd"};
+    }
+}
