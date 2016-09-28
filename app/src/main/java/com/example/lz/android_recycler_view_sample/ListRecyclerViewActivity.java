@@ -1,9 +1,12 @@
 package com.example.lz.android_recycler_view_sample;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +35,15 @@ public class ListRecyclerViewActivity extends AppCompatActivity {
 
         //color分割线
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL,20 ,getResources().getColor(android.R.color.holo_green_light)));
+        //三方分割线API https://github.com/yqritc/RecyclerView-FlexibleDivider
+//        recyclerView.addItemDecoration(
+//                new HorizontalDividerItemDecoration.Builder(this)
+//                        //.color(Color.RED)
+//                        .drawable(R.drawable.divider_bg)
+//                        .size(getResources().getDimensionPixelSize(R.dimen.divider))
+//                        .margin(getResources().getDimensionPixelSize(R.dimen.leftmargin),
+//                                getResources().getDimensionPixelSize(R.dimen.rightmargin))
+//                        .build());
     }
 
     private List<String> generateData() {
