@@ -1,7 +1,7 @@
 package com.example.lz.android_recycler_view_sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -24,7 +24,14 @@ public class ListRecyclerViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         ListRecyclerViewAdapter adapter = new ListRecyclerViewAdapter(generateData());
         recyclerView.setAdapter(adapter);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        //系统默认list分割线
+        //recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+
+        //drawable分割线
+        //recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST,R.drawable.divider_bg));
+
+        //color分割线
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL,20 ,getResources().getColor(android.R.color.holo_green_light)));
     }
 
     private List<String> generateData() {
