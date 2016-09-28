@@ -18,12 +18,13 @@ public class ListRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_recycler_view);
         recyclerView = (RecyclerView) findViewById(R.id.list_recyclerview);
-
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         ListRecyclerViewAdapter adapter = new ListRecyclerViewAdapter(generateData());
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
     }
 
     private List<String> generateData() {
