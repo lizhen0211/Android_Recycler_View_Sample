@@ -45,4 +45,8 @@ public class ListRecyclerViewAdapter extends RecyclerView.Adapter<ListRecyclerVi
             this.text = (TextView) itemView.findViewById(R.id.list_item_text);
         }
     }
+
+    public List<String> getDataSet() {
+        return dataSet;
+    }
 }
