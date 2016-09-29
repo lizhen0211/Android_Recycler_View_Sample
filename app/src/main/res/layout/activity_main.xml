@@ -43,8 +43,17 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:onClick="onListRecyclerViewClick"
-            android:text="recylerView实现列表" />
+            android:text="recylerView实现list" />
 
-
+        <Button
+            android:id="@+id/gird_recyclerview_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_recyclerview_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="onGridRecyclerViewClick"
+            android:text="recylerView实现Grid" />
     </RelativeLayout>
 </ScrollView>

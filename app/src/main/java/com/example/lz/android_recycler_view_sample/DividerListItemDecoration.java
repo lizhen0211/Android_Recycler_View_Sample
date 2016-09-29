@@ -27,7 +27,7 @@ import android.view.View;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class DividerItemDecoration extends RecyclerView.ItemDecoration {
+public class DividerListItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
@@ -45,7 +45,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
      * @param orientation 列表方向
      */
 
-    public DividerItemDecoration(Context context, int orientation) {
+    public DividerListItemDecoration(Context context, int orientation) {
         final TypedArray a = context.obtainStyledAttributes(ATTRS);
         mDivider = a.getDrawable(0);
         a.recycle();
@@ -59,7 +59,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
      * @param orientation 列表方向
      * @param drawableId  分割线图片
      */
-    public DividerItemDecoration(Context context, int orientation, int drawableId) {
+    public DividerListItemDecoration(Context context, int orientation, int drawableId) {
         this(context, orientation);
         mDivider = ContextCompat.getDrawable(context, drawableId);
         mDividerHeight = mDivider.getIntrinsicHeight();
@@ -73,7 +73,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
      * @param dividerHeight 分割线高度
      * @param dividerColor  分割线颜色
      */
-    public DividerItemDecoration(Context context, int orientation, int dividerHeight, @ColorInt int dividerColor) {
+    public DividerListItemDecoration(Context context, int orientation, int dividerHeight, @ColorInt int dividerColor) {
         setOrientation(orientation);
         mDividerHeight = dividerHeight;
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
