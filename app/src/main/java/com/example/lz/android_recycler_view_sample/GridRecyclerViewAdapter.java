@@ -55,4 +55,8 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
             text = (TextView) itemView.findViewById(R.id.grid_item_text);
         }
     }
+
+    public List<String> getDataSet() {
+        return dataSet;
+    }
 }
