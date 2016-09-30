@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,8 +16,14 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
 
     private List<String> dataSet;
 
+    private List<Integer> mHeights;
+
     public GridRecyclerViewAdapter(List<String> myDataset) {
         dataSet = myDataset;
+        mHeights = new ArrayList<Integer>();
+        for (int i = 0; i < dataSet.size(); i++) {
+            mHeights.add((int) (100 + Math.random() * 300));
+        }
     }
 
     @Override
@@ -29,6 +36,9 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.text.setText(dataSet.get(position));
+        ViewGroup.LayoutParams lp = holder.text.getLayoutParams();
+        lp.height = mHeights.get(position);
+        holder.text.setLayoutParams(lp);
     }
 
     @Override

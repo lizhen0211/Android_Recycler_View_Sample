@@ -72,6 +72,7 @@ public class ListRecyclerViewActivity extends AppCompatActivity {
         List<String> dataSet = adapter.getDataSet();
         dataSet.remove(0);
         adapter.notifyItemRemoved(0);
+        recyclerView.scrollToPosition(0);
     }
 
     //notifyItemRangeChanged(int positionStart, int itemCount)
