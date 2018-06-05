@@ -18,7 +18,8 @@
         <activity android:name=".SimpleRecyclerViewActivity" />
         <activity android:name=".SimpleCardViewActivity" />
         <activity android:name=".ListRecyclerViewActivity" />
-        <activity android:name=".GridRecyclerViewActivity"/>
+        <activity android:name=".GridRecyclerViewActivity" />
+        <activity android:name=".MultipleItemRecyclerViewActivity"/>
     </application>
 
 </manifest>

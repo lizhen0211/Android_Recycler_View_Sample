@@ -32,4 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GridRecyclerViewActivity.class);
         startActivity(intent);
     }
+
+    public void onMultipleItemClick(View view) {
+        Intent intent = new Intent(this, MultipleItemRecyclerViewActivity.class);
+        startActivity(intent);
+    }
 }
